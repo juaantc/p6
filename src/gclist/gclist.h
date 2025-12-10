@@ -32,6 +32,7 @@ class GCList{
             std::size_t Size() {return gc_.size();}
             std::string GetClassification(int num);
             const std::list <GCEntry>& GetClassification() {return gc_;}
+            void NormalizeDelays();
 
 };
 

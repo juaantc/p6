@@ -64,3 +64,18 @@ std::string GCList::GetClassification(int num){
 
     return ss.str(); //Se devuelve el contenido acumulado como un único std::string
 }
+
+void GCList::NormalizeDelays(){
+
+    //Si la lista está vacía, no hacemos nada para evitar errores
+    if(gc_.empty()){return;}
+
+    //1. Obtenemos el tiempo del líder.
+    //Como la lista está ordenada (por ApplyStage), el primero (front) es el líder.
+    int leader_delay = gc_.front().total_delay;
+
+    //2. Restamos ese tiempo a todos los corredores de la lista
+    for(auto& entry : gc_){
+        entry.total_delay -= leader_delay;
+    }
+}

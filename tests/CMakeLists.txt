@@ -34,3 +34,8 @@ add_executable(gclist-test gclist-test.cc)
 target_link_libraries(gclist-test PRIVATE GTest::gtest_main gclist)
 gtest_discover_tests(gclist-test)
 
+# Testing counter library
+add_executable(counter-test counter-test.cc)
+target_link_libraries(counter-test PRIVATE GTest::gtest_main counter)
+gtest_discover_tests(counter-test)
+
