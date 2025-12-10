@@ -4,6 +4,7 @@
 #include "persons.h"
 #include <vector>
 #include <string>
+#include <iostream>
 
 
 
@@ -21,8 +22,11 @@ class CyclistCatalog{
             std::vector <Cyclist> GetYoungest();
             void Add(Cyclist c);
 
-
 };
+
+ostream &operator<<(ostream &stream, const Punto &p){
+        stream << "(";
+}
 
 
 class DirectorCatalog{
