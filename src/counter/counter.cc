@@ -95,6 +95,8 @@ std::istream& operator>>(std::ostream& is, Counter& c){
     int input;
 
     while(true){
+        std::cout << "Introduce valor (" << c.min_ << "-" << c.max_ << "): ";
+        
         if(is >> input){
             if(input >= c.min_ && input <= c.max_){
                 c.value_ = input;
