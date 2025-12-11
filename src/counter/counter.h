@@ -33,7 +33,8 @@ class Counter{
             friend Counter operator-(int v, const Counter& c);
 
             friend std::ostream& operator<<(std::ostream& os, const Counter& c);
-            friend std::istream& operator>>(std::ostream& is, Counter& c);
+
+            friend std::istream& operator>>(std::istream& is, Counter& c);
 
 };
 

@@ -91,12 +91,12 @@ std::ostream& operator<<(std::ostream& os, const Counter& c){
     return os;
 }
 
-std::istream& operator>>(std::ostream& is, Counter& c){
+std::istream& operator>>(std::istream& is, Counter& c){
     int input;
 
     while(true){
         std::cout << "Introduce valor (" << c.min_ << "-" << c.max_ << "): ";
-        
+
         if(is >> input){
             if(input >= c.min_ && input <= c.max_){
                 c.value_ = input;
@@ -106,7 +106,8 @@ std::istream& operator>>(std::ostream& is, Counter& c){
                     } 
         } else {
                     is.clear();
-                    std::string s; is >> s;
+                    std::string s;
+                    is >> s;
                 }
         }
     return is;
