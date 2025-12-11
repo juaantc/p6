@@ -140,3 +140,8 @@ return youngest_cyclists;
 void CyclistCatalog::Add(Cyclist c){
     cyclists_.push_back(c);
 }
+
+CyclistCatalog& CyclistCatalog::operator<<(const Cyclist &c){
+    this->Add(c);
+    return* this;
+}

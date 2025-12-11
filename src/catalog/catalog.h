@@ -22,11 +22,10 @@ class CyclistCatalog{
             std::vector <Cyclist> GetYoungest();
             void Add(Cyclist c);
 
+            CyclistCatalog& operator<<(const Cyclist &c);
 };
 
-ostream &operator<<(ostream &stream, const Punto &p){
-        stream << "(";
-}
+
 
 
 class DirectorCatalog{
