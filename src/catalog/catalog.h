@@ -1,12 +1,9 @@
 #ifndef CATALOG_H
 #define CATALOG_H
 
-#include "persons.h"
+#include "../persons/persons.h"
 #include <vector>
 #include <string>
-#include <iostream>
-
-
 
 class CyclistCatalog{
 

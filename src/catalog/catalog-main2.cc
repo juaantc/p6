@@ -11,7 +11,7 @@ int main(){
     Cyclist c3{"Mikel Oyarzabal", 2002, "Mercedes Pro Cycling Team", "d500b003"};
     Cyclist c4{"Isi Palazon", 2001, "Mercedes Pro Cycling Team", "d543b004"};
 
-    std::cout << "Anadiendo ciclistas con operador <<..." << std::endl;
+    std::cout << "Anadiendo ciclistas con operador << ..." << std::endl;
 
     //2. Usar el operador << en tandas (encadenamiento)
     catalog << c1 << c2;
